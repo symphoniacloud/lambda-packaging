@@ -1,0 +1,43 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+
+    <!-- This assembly descriptor builds '.zip' deployment packages:
+        https://docs.aws.amazon.com/lambda/latest/dg/create-deployment-pkg-zip-java.html -->
+
+    <id>lambda-zip</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <dependencySets>
+        <!-- Place the main classes and resources at the top level -->
+        <dependencySet>
+            <includes>
+                <include>${project.groupId}:${project.artifactId}</include>
+            </includes>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                    <exclude>META-INF/maven/**</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+        <!-- Add all runtime dependencies as '.jar' files under the 'lib/' directory -->
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <outputDirectory>lib</outputDirectory>
+            <!-- Exclude the AWS provided core library -->
+            <excludes>
+                <exclude>com.amazonaws:aws-lambda-java-core</exclude>
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+
+</assembly>
