@@ -32,7 +32,7 @@ Add the following plugin configuration to your `pom.xml` file:
                   <dependency>
                     <groupId>io.symphonia</groupId>
                     <artifactId>lambda-packaging</artifactId>
-                    <version>1.0.0-SNAPSHOT</version>
+                    <version>1.0.0</version>
                   </dependency>
                 </dependencies>
                 <executions>
