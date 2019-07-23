@@ -4,7 +4,7 @@
 
     <groupId>io.symphonia</groupId>
     <artifactId>lambda-packaging</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>lambda-packaging</name>
@@ -34,7 +34,7 @@
         <url>scm:git:git@github.com:symphoniacloud/lambda-packaging.git</url>
         <connection>scm:git:git@github.com:symphoniacloud/lambda-packaging.git</connection>
         <developerConnection>scm:git:git@github.com:symphoniacloud/lambda-packaging.git</developerConnection>
-        <tag>v1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
