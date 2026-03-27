@@ -1,5 +1,7 @@
 # lambda-packaging
 
+**THIS REPOSITORY IS ARCHIVED AND UNMAINTANED. IT MAY NO LONGER WORK WITH RELEVANT DEPENDENCIES AND SERVICES.**
+
 [![Maven Central](https://img.shields.io/maven-central/v/io.symphonia/lambda-packaging.svg)](https://search.maven.org/artifact/io.symphonia/lambda-packaging)
 
 A collection of [Maven assembly descriptors](http://maven.apache.org/plugins/maven-assembly-plugin/examples/sharing-descriptors.html) for building [AWS Lambda](https://aws.amazon.com/lambda/) deployment packages.
